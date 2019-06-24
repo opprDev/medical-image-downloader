@@ -28,19 +28,10 @@ __credits__ = [
     "Nuno Nunes"
 ]
 
-from os import path
-
-# The current folder path.
 basePath = os.path.dirname(__file__)
-
-# The path to the repository "src" folder.
 joinPath = os.path.join(basePath, '..')
 pathAbsPath = os.path.abspath(joinPath)
-# Add the directory containing the module to
-# the Python path (wants absolute paths).
 sys.path.append(pathAbsPath)
-
-# Appending variables path
 varsPath = os.path.join(joinPath, 'variables')
 varsAbsPath = os.path.abspath(varsPath)
 sys.path.append(varsAbsPath)
