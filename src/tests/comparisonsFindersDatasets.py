@@ -1,5 +1,12 @@
 #!/usr/bin/env python
 #coding=utf-8
+import unittest
+from baseFindersDatasets import *
+from messagesFindersDatasets import *
+from pathsFindersDatasets import *
+from readersFindersDatasets import *
+from os import path as ospath
+from sys import path as syspath
 
 """
 .py:
@@ -20,47 +27,26 @@ __credits__     = [
   "Nuno Nunes"
 ]
 
-import os
-import json
-import sys
-import requests
-import unittest
+def appendPathFor(pathName):
+  varsPath = ospath.join(joinPath, pathName)
+  varsAbsPath = ospath.abspath(varsPath)
+  syspath.append(varsAbsPath)
 
-from os import path
-from pprint import pprint
-from time import gmtime, strftime
-
-# The current folder path.
-basePath = os.path.dirname(__file__)
+basePath = ospath.dirname(__file__)
 
 # The path to the repository "src" folder.
-joinPath = os.path.join(basePath, '..')
-pathAbsPath = os.path.abspath(joinPath)
+joinPath = ospath.join(basePath, '..')
+pathAbsPath = ospath.abspath(joinPath)
 # Add the directory containing the module to
 # the Python path (wants absolute paths).
-sys.path.append(pathAbsPath)
+syspath.append(pathAbsPath)
 
 # The path to the repository "root" folder.
-rootPath = os.path.join(basePath, '..', '..', '..')
-rootAbsPath = os.path.abspath(rootPath)
+rootPath = ospath.join(basePath, '..', '..', '..')
+rootAbsPath = ospath.abspath(rootPath)
 
-# Appending variables path.
-varsPath = os.path.join(joinPath, 'variables')
-varsAbsPath = os.path.abspath(varsPath)
-sys.path.append(varsAbsPath)
-
-# Appending methods path.
-modsPath = os.path.join(joinPath, 'methods')
-modsAbsPath = os.path.abspath(modsPath)
-sys.path.append(modsAbsPath)
-
-# Importing ALL available variables
-from baseFindersDatasets import *
-from messagesFindersDatasets import *
-from pathsFindersDatasets import *
-
-# Importing ALL model attributes
-from readersFindersDatasets import *
+appendPathFor('variables')
+appendPathFor('methods')
 
 class ComparisonsTest(unittest.TestCase):
 
@@ -71,5 +57,3 @@ class ComparisonsTest(unittest.TestCase):
 
 if __name__ == "__main__":
   unittest.main()
-
-# ==================== END File ==================== #

@@ -1,6 +1,14 @@
 #!/usr/bin/env python
 #coding=utf-8
 
+from baseFindersDatasets import *
+from messagesFindersDatasets import *
+from pathsFindersDatasets import *
+import os
+import sys
+import time
+import json, urllib.request
+
 """
 .py:
 """
@@ -20,14 +28,6 @@ __credits__     = [
   "Nuno Nunes"
 ]
 
-import os
-import sys
-import csv
-import time
-import json, urllib.request
-
-import pandas as pd
-
 from os import path
 
 # The current folder path.
@@ -46,14 +46,9 @@ varsAbsPath = os.path.abspath(varsPath)
 sys.path.append(varsAbsPath)
 sys.path.insert(0, varsAbsPath)
 
-# Importing available variables
-from baseFindersDatasets import *
-from messagesFindersDatasets import *
-from pathsFindersDatasets import *
-
 time_stamp = str(int(time.time()))
 
-def dwnldMainServImgStorOnDicomServ(folderToSave, mainServer, dicomServer):
+def getMedicalImages(folderToSave, mainServer, dicomServer):
   '''
   Downloading all medical images from your main server
   that are stored on a DICOM server.
@@ -61,30 +56,25 @@ def dwnldMainServImgStorOnDicomServ(folderToSave, mainServer, dicomServer):
   image_counter = 10000000
   dataStudyList = urllib.request.urlopen(mainServer).read()
   outputStudyList = json.loads(dataStudyList)
-  for ptnt in range(len(outputStudyList['studyList'])):
-    print(c010)
-    patientIdToCompare = outputStudyList['studyList'][ptnt]['patientId']
-    pntFileOnServer = lnk004 + patientIdToCompare + ext102
-    dataStudies = urllib.request.urlopen(pntFileOnServer).read()
+
+  patientFileOnServer = outputStudyList['studyList'].map(lambda patient: lnk004 + patient['patientId'] + ext102 )
+
+  for file in patientFileOnServer:
+    dataStudies = urllib.urlopen(file).read()
     outputStudies = json.loads(dataStudies)
-    for study in range(len(outputStudies)):
-      patientId = outputStudies[study]['patientId']
-      internalId = outputStudies[study]['internalId']
-      stydyId = outputStudies[study]['studyId']
-      seriesList = outputStudies[study]['seriesList']
-      print(msg001, patientId)
-      print(msg002, internalId)
-      print(msg003, stydyId)
-      for serie in range(len(seriesList)):
-        seriesNumber = seriesList[serie]['seriesNumber']
-        instanceList = seriesList[serie]['instanceList']
-        for instance in range(len(instanceList)):
-          image_counter = image_counter + 1
-          imageId = instanceList[instance]['imageId']
+    for study in outputStudies:
+      seriesList = study['seriesList']
+      print(msg001, study['patientId'])
+      print(msg002, study['internalId'])
+      print(msg003, study['studyId'])
+      for series in seriesList:
+        seriesNumber = series['seriesNumber']
+        instanceList = series['instanceList']
+        for instance in instanceList:
+          image_counter += 1
+          imageId = instance['imageId']
           print(msg004, imageId, msg005, seriesNumber)
           dcmUrl = dicomServer + imageId
-          dcmFileName = folderToSave + fn015 + str(image_counter) + ext103
+          dcmFileName = folderToSave + fn015 + image_counter + ext103
           urllib.request.urlretrieve(dcmUrl, dcmFileName)
     print(c010)
-
-# ==================== END File ==================== #

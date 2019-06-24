@@ -23,52 +23,35 @@ __credits__     = [
   "Nuno Nunes"
 ]
 
-import os
-import sys
-
-from os import path
-
-# The current folder path.
-basePath = os.path.dirname(__file__)
-
-# The path to the repository "src" folder.
-joinPath = os.path.join(basePath, '..')
-pathAbsPath = os.path.abspath(joinPath)
-# Add the directory containing the module to
-# the Python path (wants absolute paths).
-sys.path.append(pathAbsPath)
-
-# Appending variables path
-varsPath = os.path.join(joinPath, 'variables')
-varsAbsPath = os.path.abspath(varsPath)
-sys.path.append(varsAbsPath)
-sys.path.insert(0, varsAbsPath)
-
-# Importing available variables
+from os import path as ospath
+from sys import path as syspath
+from accessingFindersDatasets import *
 from baseFindersDatasets import *
 from messagesFindersDatasets import *
 from pathsFindersDatasets import *
-
-# Appending methods path
-methodsPath = os.path.join(joinPath, 'methods')
-methodsAbsPath = os.path.abspath(methodsPath)
-sys.path.append(methodsAbsPath)
-sys.path.insert(0, methodsAbsPath)
-
-# Importing available methods
-from accessingFindersDatasets import *
-
-# Appending tests path
-testsPath = os.path.join(joinPath, 'tests')
-testsAbsPath = os.path.abspath(testsPath)
-sys.path.append(testsAbsPath)
-sys.path.insert(0, testsAbsPath)
-
-# Importing available tests
 from comparisonsFindersDatasets import *
 
+def appendPathFor(pathName):
+  testsPath = ospath.join(joinPath, pathName)
+  testsAbsPath = ospath.abspath(testsPath)
+  syspath.append(testsAbsPath)
+  syspath.insert(0, testsAbsPath)
+
+basePath = ospath.dirname(__file__)
+# The path to the repository "src" folder.
+joinPath = ospath.join(basePath, '..')
+pathAbsPath = ospath.abspath(joinPath)
+# Add the directory containing the module to
+# the Python path (wants absolute paths).
+syspath.append(pathAbsPath)
+
+appendPathFor('variables')
+appendPathFor('methods')
+appendPathFor('tests')
+
+
 def main():
-  dwnldMainServImgStorOnDicomServ(pth001, lnk003, lnk005)
+  getMedicalImages(pth001, lnk003, lnk005)
 
 if __name__ == '__main__':
   main()
