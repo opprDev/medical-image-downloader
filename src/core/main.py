@@ -8,15 +8,14 @@ main.py: When creating a Python module, it is common to make
          the program.
 """
 
-__author__      = "Francisco Maria Calisto"
+__author__      = "Francisco Maria Calisto, Bruno Oliveira"
 __maintainer__  = "Francisco Maria Calisto"
 __email__       = "francisco.calisto@tecnico.ulisboa.pt"
 __license__     = "MIT"
-__version__     = "1.0.2"
+__version__     = "1.0.3"
 __status__      = "Development"
 __copyright__   = "Copyright 2019, Instituto Superior Técnico (IST)"
 __credits__     = [
-  "Bruno Oliveira",
   "Carlos Santiago",
   "Jacinto C. Nascimento",
   "Pedro Miraldo",
@@ -25,11 +24,11 @@ __credits__     = [
 
 from os import path as ospath
 from sys import path as syspath
-from accessingFindersDatasets import *
-from baseFindersDatasets import *
-from messagesFindersDatasets import *
-from pathsFindersDatasets import *
-from comparisonsFindersDatasets import *
+# from accessingFindersDatasets import *
+# from baseFindersDatasets import *
+# from messagesFindersDatasets import *
+# from pathsFindersDatasets import *
+# from comparisonsFindersDatasets import *
 
 def appendPathFor(pathName):
   testsPath = ospath.join(joinPath, pathName)
@@ -49,6 +48,7 @@ appendPathFor('variables')
 appendPathFor('methods')
 appendPathFor('tests')
 
+from accessingFindersDatasets import *
 
 def main():
   getMedicalImages(pth001, lnk003, lnk005)

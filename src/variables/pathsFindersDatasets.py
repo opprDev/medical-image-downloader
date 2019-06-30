@@ -93,7 +93,7 @@ pathToDIma = os.path.join(rootAbsPath, 'dataset-dicom-images', 'dataset', '')
 pth001 = '/src/common/'
 pth002 = '/instances/'
 
-lnk002 = 'http://localhost:8088' + pth001 # Chance URL for your own viewer
+lnk002 = 'http://localhost:8081' + pth001 # Chance URL for your own viewer
 lnk003 = lnk002 + 'studyList.json'
 lnk004 = lnk002 + 'studies/'
 lnk005 = 'http://localhost:8042' + pth002 # Chance URL for your own DICOM server
