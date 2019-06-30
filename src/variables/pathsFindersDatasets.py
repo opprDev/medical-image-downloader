@@ -90,8 +90,9 @@ pathToDIma = os.path.join(rootAbsPath, 'dataset-dicom-images', 'dataset', '')
 #       FILE & Folder NAMES      #
 # ============================== #
 
-pth001 = '/src/common/'
+pth001 = '/src/'
 pth002 = '/instances/'
+pth003 = 'downloads/'
 
 lnk002 = 'http://localhost:8081' + pth001 # Chance URL for your own viewer
 lnk003 = lnk002 + 'studyList.json'

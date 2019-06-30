@@ -51,7 +51,7 @@ appendPathFor('tests')
 from accessingFindersDatasets import *
 
 def main():
-  getMedicalImages(pth001, lnk003, lnk005)
+  getMedicalImages(pth003, lnk003, lnk005)
 
 if __name__ == '__main__':
   main()

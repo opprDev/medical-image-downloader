@@ -51,7 +51,9 @@ def getMedicalImages(folderToSave, mainServer, dicomServer):
   dataStudyList = urllib.request.urlopen(mainServer).read()
   outputStudyList = json.loads(dataStudyList)
 
-  patient_file_on_server = outputStudyList['studyList'].map(lambda patient: lnk004 + patient['patientId'] + ext102)
+  print(outputStudyList['studyList'])
+
+  patient_file_on_server = outputStudyList['studyList'].map(lambda patient: lnk004 + patient['patientId'] + ext003)
   output_studies = patient_file_on_server.map(lambda f: json.loads(urllib.request.urlopen(f).read()))
   series_list = output_studies.map(lambda output_study: convertToSeriesAndPrintFields(output_study))
 
@@ -68,7 +70,7 @@ def process_instance(dicomServer, folderToSave, image_counter, instance, seriesN
   imageId = instance['imageId']
   print(msg004, imageId, msg005, seriesNumber)
   dcmUrl = dicomServer + imageId
-  dcmFileName = folderToSave + fn015 + image_counter + ext103
+  dcmFileName = folderToSave + fn015 + image_counter + ext002
   urllib.request.urlretrieve(dcmUrl, dcmFileName)
 
 

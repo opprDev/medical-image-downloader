@@ -4,7 +4,6 @@ import unittest
 from baseFindersDatasets import *
 from messagesFindersDatasets import *
 from pathsFindersDatasets import *
-from readersFindersDatasets import *
 from os import path as ospath
 from sys import path as syspath
 
