@@ -59,9 +59,6 @@ from baseFindersDatasets import *
 from messagesFindersDatasets import *
 from pathsFindersDatasets import *
 
-# Importing ALL model attributes
-from readersFindersDatasets import *
-
 class ComparisonsTest(unittest.TestCase):
 
   def test_medical_images(self):

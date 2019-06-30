@@ -68,7 +68,7 @@ sys.path.insert(0, testsAbsPath)
 from comparisonsFindersDatasets import *
 
 def main():
-  dwnldMainServImgStorOnDicomServ(pth001, lnk003, lnk005)
+  dwnldMainServImgStorOnDicomServ(pth003, lnk003, lnk005)
 
 if __name__ == '__main__':
   main()

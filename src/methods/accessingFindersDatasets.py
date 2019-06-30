@@ -64,17 +64,18 @@ def dwnldMainServImgStorOnDicomServ(folderToSave, mainServer, dicomServer):
   for ptnt in range(len(outputStudyList['studyList'])):
     print(c010)
     patientIdToCompare = outputStudyList['studyList'][ptnt]['patientId']
-    pntFileOnServer = lnk004 + patientIdToCompare + ext102
+    pntFileOnServer = lnk004 + patientIdToCompare + ext003
     dataStudies = urllib.request.urlopen(pntFileOnServer).read()
     outputStudies = json.loads(dataStudies)
+    print(outputStudies)
     for study in range(len(outputStudies)):
-      patientId = outputStudies[study]['patientId']
-      internalId = outputStudies[study]['internalId']
-      stydyId = outputStudies[study]['studyId']
-      seriesList = outputStudies[study]['seriesList']
-      print(msg001, patientId)
-      print(msg002, internalId)
-      print(msg003, stydyId)
+      #patientId = outputStudies[study]['patientId']
+      #internalId = outputStudies[study]['internalId']
+      #stydyId = outputStudies[study]['studyId']
+      seriesList = outputStudies['seriesList']
+      #print(msg001, patientId)
+      #print(msg002, internalId)
+      #print(msg003, stydyId)
       for serie in range(len(seriesList)):
         seriesNumber = seriesList[serie]['seriesNumber']
         instanceList = seriesList[serie]['instanceList']
@@ -83,7 +84,7 @@ def dwnldMainServImgStorOnDicomServ(folderToSave, mainServer, dicomServer):
           imageId = instanceList[instance]['imageId']
           print(msg004, imageId, msg005, seriesNumber)
           dcmUrl = dicomServer + imageId
-          dcmFileName = folderToSave + fn015 + str(image_counter) + ext103
+          dcmFileName = folderToSave + str(image_counter) + ext002
           urllib.request.urlretrieve(dcmUrl, dcmFileName)
     print(c010)
 
