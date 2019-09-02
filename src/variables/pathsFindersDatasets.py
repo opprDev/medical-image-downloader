@@ -94,10 +94,12 @@ pth001 = '/src/'
 pth002 = '/instances/'
 pth003 = 'downloads/'
 
-lnk002 = 'http://localhost:8081' + pth001 # Chance URL for your own viewer
+# Chance URL for your own viewer
+lnk002 = 'http://breastscreening.isr.tecnico.ulisboa.pt:8080' + pth001
 lnk003 = lnk002 + 'studyList.json'
 lnk004 = lnk002 + 'studies/'
-lnk005 = 'http://localhost:8042' + pth002 # Chance URL for your own DICOM server
+# Chance URL for your own DICOM server
+lnk005 = 'http://breastscreening.isr.tecnico.ulisboa.pt:8450' + pth002
 
 # ============================== #
 # ============================== #
