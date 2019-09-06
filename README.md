@@ -10,10 +10,6 @@
 <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
 </a>
 
-<a href="https://opencollective.com/oppr" target="_blank">
-<img src="https://opencollective.com/oppr/tiers/backer.svg" width="120">
-</a>
-
 ## Pre-Requisites
 
 The following list is showing the set of dependencies for this project. Please, install and build in your machine the recommended versions.
@@ -99,3 +95,7 @@ A special thanks to [Chris Hafey](https://www.linkedin.com/in/chafey/), the prop
 - [Francisco Maria Calisto](http://www.franciscocalisto.me/) [[ResearchGate](https://www.researchgate.net/profile/Francisco_Maria_Calisto) | [GitHub](https://github.com/FMCalisto) | [Twitter](https://twitter.com/FMCalisto) | [LinkedIn](https://www.linkedin.com/in/fmcalisto/)]
 
 ## Sponsors
+
+<a href="https://opencollective.com/oppr" target="_blank">
+<img src="https://opencollective.com/oppr/tiers/backer.svg" width="220">
+</a>
