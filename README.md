@@ -10,7 +10,9 @@
 <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
 </a>
 
-<object type="image/svg+xml" data="https://opencollective.com/oppr/tiers/backer.svg?avatarHeight=36&width=600"></object>
+<a href="https://opencollective.com/oppr" target="_blank">
+<img src="https://opencollective.com/oppr/tiers/backer.svg?avatarHeight=36&width=600" width="160">
+</a>
 
 ## Pre-Requisites
 
