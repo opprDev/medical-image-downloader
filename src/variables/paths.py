@@ -9,7 +9,7 @@ __author__      = "Francisco Maria Calisto"
 __maintainer__  = "Francisco Maria Calisto"
 __email__       = "francisco.calisto@tecnico.ulisboa.pt"
 __license__     = "MIT"
-__version__     = "1.0.1"
+__version__     = "1.2.2"
 __status__      = "Development"
 __copyright__   = "Copyright 2019, Instituto Superior Técnico (IST)"
 __credits__     = [
@@ -95,7 +95,7 @@ pth002 = '/instances/'
 pth003 = 'downloads/'
 
 # Chance URL for your own viewer
-lnk002 = 'http://breastscreening.isr.tecnico.ulisboa.pt:8080' + pth001
+lnk002 = 'http://breastscreening.isr.tecnico.ulisboa.pt:8982' + pth001
 lnk003 = lnk002 + 'studyList.json'
 lnk004 = lnk002 + 'studies/'
 # Chance URL for your own DICOM server

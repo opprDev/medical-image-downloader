@@ -12,7 +12,7 @@ __author__      = "Francisco Maria Calisto"
 __maintainer__  = "Francisco Maria Calisto"
 __email__       = "francisco.calisto@tecnico.ulisboa.pt"
 __license__     = "MIT"
-__version__     = "1.0.2"
+__version__     = "1.2.2"
 __status__      = "Development"
 __copyright__   = "Copyright 2019, Instituto Superior Técnico (IST)"
 __credits__     = [
@@ -45,9 +45,9 @@ sys.path.append(varsAbsPath)
 sys.path.insert(0, varsAbsPath)
 
 # Importing available variables
-from baseFindersDatasets import *
-from messagesFindersDatasets import *
-from pathsFindersDatasets import *
+from base import *
+from messages import *
+from paths import *
 
 # Appending methods path
 methodsPath = os.path.join(joinPath, 'methods')
@@ -56,7 +56,7 @@ sys.path.append(methodsAbsPath)
 sys.path.insert(0, methodsAbsPath)
 
 # Importing available methods
-from accessingFindersDatasets import *
+from accessing import *
 
 # Appending tests path
 testsPath = os.path.join(joinPath, 'tests')
@@ -65,7 +65,7 @@ sys.path.append(testsAbsPath)
 sys.path.insert(0, testsAbsPath)
 
 # Importing available tests
-from comparisonsFindersDatasets import *
+from comparisons import *
 
 def main():
   dwnldMainServImgStorOnDicomServ(pth003, lnk003, lnk005)

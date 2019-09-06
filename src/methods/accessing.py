@@ -2,14 +2,17 @@
 #coding=utf-8
 
 """
-.py:
+accessing.py: To access both servers, i.e., CornerstoneDemo and Orthanc,
+              we need to provide feature for that. Or even methods for that.
+              The purpose of this file is to aggregate all methods for the
+              purpose and provide feature levels for developers.
 """
 
 __author__      = "Francisco Maria Calisto"
 __maintainer__  = "Francisco Maria Calisto"
 __email__       = "francisco.calisto@tecnico.ulisboa.pt"
 __license__     = "MIT"
-__version__     = "1.0.2"
+__version__     = "1.2.2"
 __status__      = "Development"
 __copyright__   = "Copyright 2019, Instituto Superior Técnico (IST)"
 __credits__     = [
@@ -47,9 +50,9 @@ sys.path.append(varsAbsPath)
 sys.path.insert(0, varsAbsPath)
 
 # Importing available variables
-from baseFindersDatasets import *
-from messagesFindersDatasets import *
-from pathsFindersDatasets import *
+from base import *
+from messages import *
+from paths import *
 
 time_stamp = str(int(time.time()))
 
@@ -69,13 +72,7 @@ def dwnldMainServImgStorOnDicomServ(folderToSave, mainServer, dicomServer):
     outputStudies = json.loads(dataStudies)
     print(outputStudies)
     for study in range(len(outputStudies)):
-      #patientId = outputStudies[study]['patientId']
-      #internalId = outputStudies[study]['internalId']
-      #stydyId = outputStudies[study]['studyId']
       seriesList = outputStudies['seriesList']
-      #print(msg001, patientId)
-      #print(msg002, internalId)
-      #print(msg003, stydyId)
       for serie in range(len(seriesList)):
         seriesNumber = seriesList[serie]['seriesNumber']
         instanceList = seriesList[serie]['instanceList']

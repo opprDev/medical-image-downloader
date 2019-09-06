@@ -2,14 +2,14 @@
 #coding=utf-8
 
 """
-.py:
+comparisons.py: Testing comparisons for our set of methods and files.
 """
 
 __author__      = "Francisco Maria Calisto"
 __maintainer__  = "Francisco Maria Calisto"
 __email__       = "francisco.calisto@tecnico.ulisboa.pt"
 __license__     = "MIT"
-__version__     = "1.0.0"
+__version__     = "1.2.2"
 __status__      = "Development"
 __copyright__   = "Copyright 2019, Instituto Superior Técnico (IST)"
 __credits__     = [
@@ -55,9 +55,9 @@ modsAbsPath = os.path.abspath(modsPath)
 sys.path.append(modsAbsPath)
 
 # Importing ALL available variables
-from baseFindersDatasets import *
-from messagesFindersDatasets import *
-from pathsFindersDatasets import *
+from base import *
+from messages import *
+from paths import *
 
 class ComparisonsTest(unittest.TestCase):
 
