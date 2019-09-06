@@ -2,6 +2,16 @@
 
 <img src="https://github.com/mida-project/meta/blob/master/banners/dataset-samples_1000x250.png?raw=true" />
 
+<img src="https://opencollective.com/oppr/tiers/backer/badge.svg?label=backer&color=brightgreen" />
+
+
+
+<a href="https://www.patreon.com/oppr" target="_blank">
+<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
+</a>
+
+<object type="image/svg+xml" data="https://opencollective.com/oppr/tiers/backer.svg?avatarHeight=36&width=600"></object>
+
 ## Pre-Requisites
 
 The following list is showing the set of dependencies for this project. Please, install and build in your machine the recommended versions.
