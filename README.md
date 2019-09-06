@@ -11,7 +11,7 @@
 </a>
 
 <a href="https://opencollective.com/oppr" target="_blank">
-<img src="https://opencollective.com/oppr/tiers/backer.svg?avatarHeight=36&width=600" width="160">
+<img src="https://opencollective.com/oppr/tiers/backer.svg" width="160">
 </a>
 
 ## Pre-Requisites
