@@ -2,8 +2,9 @@
 
 <img src="https://github.com/mida-project/meta/blob/master/banners/dataset-samples_1000x250.png?raw=true" />
 
-[![OpenCollective](https://opencollective.com/oppr/backers/badge.svg?sanitize=true)](#backers)
-[![OpenCollective](https://opencollective.com/oppr/sponsors/badge.svg?sanitize=true)](#sponsors)
+[![OpenCollective](https://opencollective.com/oppr/backers/badge.svg?style=flat-square&logo=appveyor)](#backers)
+[![OpenCollective](https://opencollective.com/oppr/sponsors/badge.svg?style=flat-square&logo=appveyor)](#sponsors)
+[![Gitter](https://img.shields.io/gitter/room/gitterHQ/gitter.svg?style=flat-square&logo=appveyor)]()
 
 
 <a href="https://www.patreon.com/oppr" target="_blank">
