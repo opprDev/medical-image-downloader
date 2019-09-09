@@ -2,8 +2,8 @@
 
 <img src="https://github.com/mida-project/meta/blob/master/banners/dataset-samples_1000x250.png?raw=true" />
 
-[![OpenCollective](https://opencollective.com/oppr/backers/badge.svg)](#backers)
-[![OpenCollective](https://opencollective.com/oppr/sponsors/badge.svg)](#sponsors)
+[![OpenCollective](https://opencollective.com/oppr/backers/badge.svg?sanitize=true)](#backers)
+[![OpenCollective](https://opencollective.com/oppr/sponsors/badge.svg?sanitize=true)](#sponsors)
 
 
 <a href="https://www.patreon.com/oppr" target="_blank">
