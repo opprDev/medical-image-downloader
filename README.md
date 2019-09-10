@@ -2,12 +2,11 @@
 
 <img src="https://github.com/mida-project/meta/blob/master/banners/dataset-samples_1000x250.png?raw=true" />
 
-[![PyPI](https://img.shields.io/pypi/v/python)](https://pypi.org/)
+[![PyPI](https://img.shields.io/pypi/v/python?style=flat-square)](https://pypi.org/)
 [![HitCount](http://hits.dwyl.io/opprDev/medical-image-downloader.svg)](http://hits.dwyl.io/opprDev/medical-image-downloader)
-[![OpenCollective](https://opencollective.com/oppr/backers/badge.svg)](#backers)
-[![OpenCollective](https://opencollective.com/oppr/sponsors/badge.svg)](#sponsors)
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/3172/badge)](https://bestpractices.coreinfrastructure.org/projects/3172)
-[![Gitter](https://img.shields.io/gitter/room/gitterHQ/gitter.svg)](https://gitter.im/opprTeam)
+[![OpenCollective](https://opencollective.com/oppr/backers/badge.svg?style=flat-square)](#backers)
+[![OpenCollective](https://opencollective.com/oppr/sponsors/badge.svg?style=flat-square)](#sponsors)
+[![Gitter](https://img.shields.io/gitter/room/gitterHQ/gitter.svg?style=flat-square)](https://gitter.im/opprTeam)
 
 The presented repository has the source code for the "[Medical Imaging Downloader for CornerstoneJS and Orthanc](https://medium.com/oppr/medical-imaging-downloader-for-cornerstonejs-and-orthanc-d08c3a508d9b)" medium story. It represents the set of scripts to download medical images from a [WADO](https://www.medicalconnections.co.uk/tags/WADO) server and [PACS](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1718393/). For the purpose, we are using lightweight [JavaScript](https://www.javascript.com/) library for displaying medical images in a web browser, called [CornerstoneJS](https://cornerstonejs.org/). To store and retrieve the medical images, we are using the [Orthanc](https://www.orthanc-server.com/) server as a standalone [DICOM](https://www.dicomlibrary.com/) server. The scripts are reading from the [WADO](https://www.medicalconnections.co.uk/tags/WADO) server, linking the image paths to the [PACS](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1718393/) to retrieve the images from here and download it to a local folder. In other words, the code will know where are the images from the [`prototype-cornerstone`](https://github.com/MIMBCD-UI/prototype-cornerstone/) sample, retrieving the images stored at a [Orthanc](https://www.orthanc-server.com/) server.
 
@@ -90,6 +89,16 @@ jupyter notebook
 > If you have any question regarding the [Jupyter Notebook](http://jupyter.org/) just follow their [Documentation](http://jupyter.org/documentation). You can also ask for help close to the [Community](http://jupyter.org/community).
 
 ## Information
+
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/3172/badge)](https://bestpractices.coreinfrastructure.org/projects/3172)
+
+We need to follow the repository goal, by addressing the thereby information. Therefore, it is of chief importance to scale this solution supported by the repository. The repository solution follow the best practices achieving the [Core Infrastructure Initiative (CII)](https://bestpractices.coreinfrastructure.org/en/projects/3172) specifications.
+
+### License
+
+Copyright © 2019 [oppr](https://oppr.io)
+
+The [`medical-image-downloader`](https://github.com/opprDev/medical-image-downloader) repository is distributed under the terms of [MIT](LICENSE) license and the present information is covered by this. You are free to make changes and use this in either personal or commercial projects. Attribution is not required, but it is welcomed. A little "Thanks!" (or something to that affect) would be much appreciated.
 
 ### Acknowledgements
 
