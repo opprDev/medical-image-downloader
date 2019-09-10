@@ -2,6 +2,9 @@
 
 <img src="https://github.com/mida-project/meta/blob/master/banners/dataset-samples_1000x250.png?raw=true" />
 
+https://img.shields.io/pypi/v/pandas
+
+[!![PyPI](https://img.shields.io/pypi/v/pandas)](https://pypi.org/)
 [![HitCount](http://hits.dwyl.io/opprDev/medical-image-downloader.svg)](http://hits.dwyl.io/opprDev/medical-image-downloader)
 [![OpenCollective](https://opencollective.com/oppr/backers/badge.svg?style=flat-square)](#backers)
 [![OpenCollective](https://opencollective.com/oppr/sponsors/badge.svg?style=flat-square)](#sponsors)
