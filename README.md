@@ -92,7 +92,7 @@ jupyter notebook
 
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/3172/badge)](https://bestpractices.coreinfrastructure.org/projects/3172)
 
-We need to follow the repository goal, by addressing the thereby information. Therefore, it is of chief importance to scale this solution supported by the repository. The repository solution follow the best practices achieving the [Core Infrastructure Initiative (CII)](https://bestpractices.coreinfrastructure.org/en/projects/3172) specifications.
+We need to follow the repository goal, by addressing the thereby information. Therefore, it is of chief importance to scale this solution supported by the repository. The repository solution follow the best practices, achieving the [Core Infrastructure Initiative (CII)](https://bestpractices.coreinfrastructure.org/en/projects/3172) specifications.
 
 ### License
 
