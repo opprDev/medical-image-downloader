@@ -10,6 +10,7 @@
 [![OpenCollective](https://opencollective.com/oppr/sponsors/badge.svg?style=flat-square)](#sponsors)
 [![Gitter](https://img.shields.io/gitter/room/gitterHQ/gitter.svg?style=flat-square)](https://gitter.im/opprTeam)
 [![Status](https://flat.badgen.net/github/status/opprDev/medical-image-downloader)]()
+[![Twitter](https://flat.badgen.net/twitter/follow/opprGroup)](https://twitter.com/opprGroup)
 
 The presented repository has the source code for the "[Medical Imaging Downloader for CornerstoneJS and Orthanc](https://medium.com/oppr/medical-imaging-downloader-for-cornerstonejs-and-orthanc-d08c3a508d9b)" medium story. It represents the set of scripts to download medical images from a [WADO](https://www.medicalconnections.co.uk/tags/WADO) server and [PACS](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1718393/). For the purpose, we are using lightweight [JavaScript](https://www.javascript.com/) library for displaying medical images in a web browser, called [CornerstoneJS](https://cornerstonejs.org/). To store and retrieve the medical images, we are using the [Orthanc](https://www.orthanc-server.com/) server as a standalone [DICOM](https://www.dicomlibrary.com/) server. The scripts are reading from the [WADO](https://www.medicalconnections.co.uk/tags/WADO) server, linking the image paths to the [PACS](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1718393/) to retrieve the images from here and download it to a local folder. In other words, the code will know where are the images from the [`prototype-cornerstone`](https://github.com/MIMBCD-UI/prototype-cornerstone/) sample, retrieving the images stored at a [Orthanc](https://www.orthanc-server.com/) server.
 
@@ -111,8 +112,27 @@ A special thanks to [Chris Hafey](https://www.linkedin.com/in/chafey/), the prop
 
 - [Francisco Maria Calisto](http://www.franciscocalisto.me/) [[ResearchGate](https://www.researchgate.net/profile/Francisco_Maria_Calisto) | [GitHub](https://github.com/FMCalisto) | [Twitter](https://twitter.com/FMCalisto) | [LinkedIn](https://www.linkedin.com/in/fmcalisto/)]
 
-## Sponsors
+## Supporters
+
+Our organization is a non-profit organization. However, we have many expenses across our activity. From infrastructure to service expenses, we need some money, as well as help, to support our team and projects.
 
 <a href="https://opencollective.com/oppr" target="_blank">
 <img src="https://opencollective.com/oppr/tiers/backer.svg" width="220">
 </a>
+
+### Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+<a href="https://github.com/badges/oppr/graphs/contributors"><img src="https://opencollective.com/oppr/contributors.svg?width=890" /></a>
+
+### Backers
+
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/oppr#backer)]
+
+<a href="https://opencollective.com/oppr#backers" target="_blank"><img src="https://opencollective.com/oppr/backers.svg?width=890"></a>
+
+### Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/oppr#sponsor)]
+
+<a href="https://opencollective.com/oppr/sponsor/0/website" target="_blank"><img src="https://opencollective.com/oppr/sponsor/0/avatar.svg"></a>
