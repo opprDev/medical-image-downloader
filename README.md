@@ -4,12 +4,12 @@
 
 [![MIT](https://flat.badgen.net/github/license/opprDev/medical-image-downloader)](https://github.com/opprDev/medical-image-downloader/blob/master/LICENSE)
 [![PyPI](https://img.shields.io/pypi/v/python?style=flat-square)](https://pypi.org/)
-![Last commit](https://img.shields.io/github/last-commit/opprDev/medical-image-downloader?style=flat-square)
+[![Last commit](https://img.shields.io/github/last-commit/opprDev/medical-image-downloader?style=flat-square)](https://github.com/opprDev/medical-image-downloader/commits/master)
 [![HitCount](http://hits.dwyl.io/opprDev/medical-image-downloader.svg)](http://hits.dwyl.io/opprDev/medical-image-downloader)
 [![OpenCollective](https://opencollective.com/oppr/backers/badge.svg?style=flat-square)](#backers)
 [![OpenCollective](https://opencollective.com/oppr/sponsors/badge.svg?style=flat-square)](#sponsors)
 [![Gitter](https://img.shields.io/gitter/room/gitterHQ/gitter.svg?style=flat-square)](https://gitter.im/opprTeam)
-![Status](https://flat.badgen.net/github/status/opprDev/medical-image-downloader)
+[![Status](https://flat.badgen.net/github/status/opprDev/medical-image-downloader)](https://circleci.com/gh/opprDev/medical-image-downloader)
 [![Twitter](https://flat.badgen.net/twitter/follow/opprGroup)](https://twitter.com/opprGroup)
 
 The presented repository has the source code for the "[Medical Imaging Downloader for CornerstoneJS and Orthanc](https://medium.com/oppr/medical-imaging-downloader-for-cornerstonejs-and-orthanc-d08c3a508d9b)" medium story. It represents the set of scripts to download medical images from a [WADO](https://www.medicalconnections.co.uk/tags/WADO) server and [PACS](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1718393/). For the purpose, we are using lightweight [JavaScript](https://www.javascript.com/) library for displaying medical images in a web browser, called [CornerstoneJS](https://cornerstonejs.org/). To store and retrieve the medical images, we are using the [Orthanc](https://www.orthanc-server.com/) server as a standalone [DICOM](https://www.dicomlibrary.com/) server. The scripts are reading from the [WADO](https://www.medicalconnections.co.uk/tags/WADO) server, linking the image paths to the [PACS](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1718393/) to retrieve the images from here and download it to a local folder. In other words, the code will know where are the images from the [`prototype-cornerstone`](https://github.com/MIMBCD-UI/prototype-cornerstone/) sample, retrieving the images stored at a [Orthanc](https://www.orthanc-server.com/) server.
