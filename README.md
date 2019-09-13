@@ -2,7 +2,7 @@
 
 <img src="https://github.com/mida-project/meta/blob/master/banners/dataset-samples_1000x250.png?raw=true" />
 
-[![MIT](https://flat.badgen.net/badge/license/MIT/blue)](https://github.com/opprDev/medical-image-downloader/blob/master/LICENSE)
+[![MIT](https://flat.badgen.net/github/license/opprDev/medical-image-downloader)](https://github.com/opprDev/medical-image-downloader/blob/master/LICENSE)
 [![PyPI](https://img.shields.io/pypi/v/python?style=flat-square)](https://pypi.org/)
 ![Last commit](https://img.shields.io/github/last-commit/opprDev/medical-image-downloader?style=flat-square)
 [![HitCount](http://hits.dwyl.io/opprDev/medical-image-downloader.svg)](http://hits.dwyl.io/opprDev/medical-image-downloader)
