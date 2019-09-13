@@ -4,7 +4,6 @@
 
 [![MIT](https://flat.badgen.net/badge/license/MIT/blue)](https://github.com/opprDev/medical-image-downloader/blob/master/LICENSE)
 [![PyPI](https://img.shields.io/pypi/v/python?style=flat-square)](https://pypi.org/)
-[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FopprDev%2Fmedical-image-downloader%2Fbadge%3Fref%3Dmaster&style=flat-square)](https://actions-badge.atrox.dev/opprDev/medical-image-downloader/goto?ref=master)
 ![Last commit](https://img.shields.io/github/last-commit/opprDev/medical-image-downloader?style=flat-square)
 [![HitCount](http://hits.dwyl.io/opprDev/medical-image-downloader.svg)](http://hits.dwyl.io/opprDev/medical-image-downloader)
 [![OpenCollective](https://opencollective.com/oppr/backers/badge.svg?style=flat-square)](#backers)
