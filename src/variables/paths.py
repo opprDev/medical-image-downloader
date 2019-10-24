@@ -2,7 +2,7 @@
 #coding=utf-8
 
 """
-.py:
+paths.py: All paths for the project.
 """
 
 __author__      = "Francisco Maria Calisto"
