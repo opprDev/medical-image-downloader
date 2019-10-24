@@ -160,12 +160,6 @@ smmap2==2.0.5
 snowballstemmer==1.2.1
 sounddevice==0.3.13
 SoundFile==0.10.2
-Sphinx==2.0.0.dev20190211
-sphinxcontrib-applehelp==1.0.0
-sphinxcontrib-devhelp==1.0.0
-sphinxcontrib-jsmath==1.0.1
-sphinxcontrib-qthelp==1.0.0
-sphinxcontrib-websupport==1.1.0
 statsmodels==0.10.1
 tables==3.5.1
 terminado==0.8.1
