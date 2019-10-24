@@ -57,7 +57,7 @@ The installation guidelines are as follows. Please, be sure that you follow it c
 2.1. Run the following command to install the [library](https://pip.pypa.io/en/stable/user_guide/) set using [pip](https://pypi.org/project/pip/):
 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 2.2. Follow the next step;
