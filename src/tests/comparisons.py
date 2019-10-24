@@ -61,6 +61,7 @@ from paths import *
 
 class ComparisonsTest(unittest.TestCase):
 
+  # TODO
   def test_medical_images(self):
     varToTest = 1 + 1
     varResult = 2
