@@ -1,32 +1,10 @@
-#!/usr/bin/env python
-# coding=utf-8
-
-"""
-DownloadAllTestCase.py: Testing comparisons for our set of methods and files.
-"""
-
 from unittest import TestCase
+from mimbcd_ui import download_all
 from unittest.mock import call, patch
+from mimbcd_ui.constant import MIMBCD_UI_ORTHANC_URL, MIMBCD_UI_STUDY_LIST_URL
 
 import test.mimbcd_ui.mock.json.loads
 import test.mimbcd_ui.mock.urllib.request.urlopen
-from mimbcd_ui import download_all
-from paths import MIMBCD_UI_STUDY_LIST_URL, MIMBCD_UI_ORTHANC_URL
-
-__author__      = "Francisco Maria Calisto"
-__maintainer__  = "Francisco Maria Calisto"
-__email__       = "francisco.calisto@tecnico.ulisboa.pt"
-__license__     = "MIT"
-__version__     = "0.1.2"
-__status__      = "Development"
-__copyright__   = "Copyright 2019, Instituto Superior Técnico (IST)"
-__credits__     = [
-  "Bruno Oliveira",
-  "Carlos Santiago",
-  "Jacinto C. Nascimento",
-  "Pedro Miraldo",
-  "Nuno Nunes"
-]
 
 
 @patch('urllib.request.urlopen', return_value=test.mimbcd_ui.mock.urllib.request.urlopen.returnValue)

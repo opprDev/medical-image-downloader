@@ -1,41 +1,20 @@
-#!/usr/bin/env python
-# coding=utf-8
-
-"""
-DownloadAllTestCase.py: To access both servers, i.e., CornerstoneDemo and Orthanc,
-              we need to provide feature for that. Or even methods for that.
-              The purpose of this file is to aggregate all methods for the
-              purpose and provide feature levels for developers.
-"""
+from .constant import MIMBCD_UI_STUDY_LIST_URL, MIMBCD_UI_STUDIES_URL
 
 import json
 import urllib.request
 
-from base import *
-from messages import *
-from paths import *
+HORIZONTAL_DOUBLE_LINE = "=============================="
+ADDRESSING_IMAGE_ID = "Addressing the Image ID"
+OF_THE_SERIES_NUMBER = "of the Series number"
 
-__author__      = "Francisco Maria Calisto"
-__maintainer__  = "Francisco Maria Calisto"
-__email__       = "francisco.calisto@tecnico.ulisboa.pt"
-__license__     = "MIT"
-__version__     = "0.1.2"
-__status__      = "Development"
-__copyright__   = "Copyright 2019, Instituto Superior Técnico (IST)"
-__credits__     = [
-  "Bruno Oliveira",
-  "Carlos Santiago",
-  "Jacinto C. Nascimento",
-  "Pedro Miraldo",
-  "Nuno Nunes"
-]
+TEXT_FILE_EXTENSION = '.txt'
+DICOM_FILE_EXTENSION = '.dcm'
+JSON_FILE_EXTENSION = '.json'
+
+INSTANCES_DIRECTORY = '/instances/'
 
 
 def download_all(source_dicom_server_url, destination_directory):
-  """
-  Downloading all medical images from your main server
-  that are stored on a DICOM server.
-  """
   dicom_file_counter = 10000000
   study_list_fp = urllib.request.urlopen(MIMBCD_UI_STUDY_LIST_URL).read()
   study_list = json.loads(study_list_fp)
