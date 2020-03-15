@@ -1,9 +1,11 @@
 #!/usr/bin/env python
-#coding=utf-8
+# coding=utf-8
 
 """
 base.py: All basic variables are presented here.
 """
+
+import logging
 
 __author__      = "Francisco Maria Calisto"
 __maintainer__  = "Francisco Maria Calisto"
@@ -21,8 +23,6 @@ __credits__     = [
   "Duarte Figueirôa"
 ]
 
-import logging
-
 logging.basicConfig(format='%(message)s')
 log = logging.getLogger()
 
@@ -36,25 +36,12 @@ levelNameToSet = 'CRITICAL'
 level = logging.getLevelName(levelNameToSet)
 log.setLevel(level)
 
-# This MESSAGES will not reach the Humans.
 log.debug('MODE: debug')
 log.info('MODE: info')
-log.warn('MODE: warn')
+log.warning('MODE: warning')
 log.error('MODE: error')
 log.critical('MODE: critical')
 
-## Citizens of Earth, your planet will be removed NOW!
-
-tot001 = 'total'
-
-birads_1 = 1
-birads_2 = 2
-birads_3 = 3
-birads_4 = 4
-birads_5 = 5
-
-ext001 = '.txt'
-ext002 = '.dcm'
-ext003 = '.json'
-
-# ==================== END File ==================== #
+TEXT_FILE_EXTENSION = '.txt'
+DICOM_FILE_EXTENSION = '.dcm'
+JSON_FILE_EXTENSION = '.json'
