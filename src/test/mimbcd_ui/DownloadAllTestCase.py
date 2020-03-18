@@ -3,19 +3,17 @@ from mimbcd_ui import download_all
 from unittest.mock import call, patch
 from mimbcd_ui.constant import MIMBCD_UI_ORTHANC_URL, MIMBCD_UI_STUDY_LIST_URL
 
-import test.mimbcd_ui.mock.json.loads
 import test.mimbcd_ui.mock.urllib.request.urlopen
 
 
-@patch('urllib.request.urlopen', return_value=test.mimbcd_ui.mock.urllib.request.urlopen.returnValue)
 @patch('urllib.request.urlretrieve')
 class DownloadAllTestCase(TestCase):
-  @patch('json.loads', side_effect=test.mimbcd_ui.mock.json.loads.sideEffect())
-  def test_whenDownloadMedicalImages_thenInvokeUrlopenFourTimes(self, mock_loads, mock_urlretrieve, mock_urlopen):
+  @patch('urllib.request.urlopen', side_effect=test.mimbcd_ui.mock.urllib.request.urlopen.sideEffect())
+  def test_whenDownloadMedicalImages_thenInvokeUrlopenFourTimes(self, mock_urlopen, mock_urlretrieve):
     self.urlopen_called_four_times(mock_urlopen)
 
-  @patch('json.loads', side_effect=test.mimbcd_ui.mock.json.loads.sideEffect())
-  def test_whenDownloadMedicalImages_thenInvokeUrlretrieveSeveralTimes(self, mock_loads, mock_urlretrieve, mock_urlopen):
+  @patch('urllib.request.urlopen', side_effect=test.mimbcd_ui.mock.urllib.request.urlopen.sideEffect())
+  def test_whenDownloadMedicalImages_thenInvokeUrlretrieveSeveralTimes(self, mock_urlopen, mock_urlretrieve):
     download_all(
       source_dicom_server_url=MIMBCD_UI_ORTHANC_URL,
       destination_directory='downloads/'
@@ -185,24 +183,24 @@ class DownloadAllTestCase(TestCase):
       call('http://breastscreening.isr.tecnico.ulisboa.pt:8450/instances/88653231-d6fba822-1af594af-e6f5b30d-dd1ab7f2/file', 'downloads/10000162.dcm')
     ])
 
-  @patch('json.loads', side_effect=test.mimbcd_ui.mock.json.loads.sideEffect_withEmptyStudyList())
-  def test_whenDownloadMedicalImages_withEmptyStudyList_thenInvokeUrlopenOnce(self, mock_loads, mock_urlretrieve, mock_urlopen):
+  @patch('urllib.request.urlopen', side_effect=test.mimbcd_ui.mock.urllib.request.urlopen.sideEffect_withEmptyStudyList())
+  def test_whenDownloadMedicalImages_withEmptyStudyList_thenInvokeUrlopenOnce(self, mock_urlopen, mock_urlretrieve):
     download_all(
       source_dicom_server_url=MIMBCD_UI_ORTHANC_URL,
       destination_directory='downloads/'
     )
     mock_urlopen.assert_called_once_with(MIMBCD_UI_STUDY_LIST_URL)
 
-  @patch('json.loads', side_effect=test.mimbcd_ui.mock.json.loads.sideEffect_withEmptyStudyList())
-  def test_whenDownloadMedicalImages_withEmptyStudyList_thenDoNotInvokeUrlretrieve(self, mock_loads, mock_urlretrieve, mock_urlopen):
+  @patch('urllib.request.urlopen', side_effect=test.mimbcd_ui.mock.urllib.request.urlopen.sideEffect_withEmptyStudyList())
+  def test_whenDownloadMedicalImages_withEmptyStudyList_thenDoNotInvokeUrlretrieve(self, mock_urlopen, mock_urlretrieve):
     self.urlretrieve_not_called(mock_urlretrieve)
 
-  @patch('json.loads', side_effect=test.mimbcd_ui.mock.json.loads.sideEffect_withEmptySeriesList())
-  def test_whenDownloadMedicalImages_withEmptySeriesList_thenInvokeUrlopenOnce(self, mock_loads, mock_urlretrieve, mock_urlopen):
+  @patch('urllib.request.urlopen', side_effect=test.mimbcd_ui.mock.urllib.request.urlopen.sideEffect_withEmptySeriesList())
+  def test_whenDownloadMedicalImages_withEmptySeriesList_thenInvokeUrlopenOnce(self, mock_urlopen, mock_urlretrieve):
     self.urlopen_called_four_times(mock_urlopen)
 
-  @patch('json.loads', side_effect=test.mimbcd_ui.mock.json.loads.sideEffect_withEmptySeriesList())
-  def test_whenDownloadMedicalImages_withEmptySeriesList_thenDoNotInvokeUrlretrieve(self, mock_loads, mock_urlretrieve, mock_urlopen):
+  @patch('urllib.request.urlopen', side_effect=test.mimbcd_ui.mock.urllib.request.urlopen.sideEffect_withEmptySeriesList())
+  def test_whenDownloadMedicalImages_withEmptySeriesList_thenDoNotInvokeUrlretrieve(self, mock_urlopen, mock_urlretrieve):
     self.urlretrieve_not_called(mock_urlretrieve)
 
   def urlopen_called_four_times(self, mock_urlopen):

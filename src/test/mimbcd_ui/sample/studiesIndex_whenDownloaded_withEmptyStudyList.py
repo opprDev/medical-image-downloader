@@ -1,3 +1,3 @@
-studiesIndex_whenDownloaded_withEmptyStudyList = {
-    'studyList': []
-}
+studiesIndex_whenDownloaded_withEmptyStudyList = """{
+    \"studyList\": []
+}"""
