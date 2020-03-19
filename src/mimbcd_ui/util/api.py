@@ -8,16 +8,12 @@ def download_study_list():
   return study_list.studyList
 
 
-def download_study(study_without_series):
+def download_series_list(study_without_series):
   print('==============================')
   patient_id = study_without_series.patientId
   study_url = format_study_url(patient_id)
   study = download_json(study_url)
   print(study)
-  return study
-
-
-def get_series_list(study):
   return study.seriesList
 
 
