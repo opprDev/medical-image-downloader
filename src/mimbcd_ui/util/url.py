@@ -1,4 +1,4 @@
-import urllib
+import urllib.request
 from mimbcd_ui.util.format import format_json
 
 

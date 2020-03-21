@@ -20,4 +20,4 @@ def format_dicom_file_url(source_dicom_server_url, image_id):
 
 
 def format_destination_path(destination_directory, dicom_file_name):
-  return destination_directory + dicom_file_name + DICOM_FILE_EXTENSION
+  return destination_directory + "/" + dicom_file_name + DICOM_FILE_EXTENSION
