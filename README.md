@@ -3,9 +3,7 @@
 <img src="https://github.com/mida-project/meta/blob/master/banners/dataset-samples_1000x250.png?raw=true" />
 
 [![MIT](https://flat.badgen.net/github/license/opprDev/medical-image-downloader)](https://github.com/opprDev/medical-image-downloader/blob/master/LICENSE)
-[![PyPI](https://img.shields.io/pypi/v/python?style=flat-square)](https://pypi.org/)
 [![Last commit](https://img.shields.io/github/last-commit/opprDev/medical-image-downloader?style=flat-square)](https://github.com/opprDev/medical-image-downloader/commits/master)
-[![HitCount](http://hits.dwyl.io/opprDev/medical-image-downloader.svg)](http://hits.dwyl.io/opprDev/medical-image-downloader)
 [![OpenCollective](https://opencollective.com/oppr/backers/badge.svg?style=flat-square)](#backers)
 [![OpenCollective](https://opencollective.com/oppr/sponsors/badge.svg?style=flat-square)](#sponsors)
 [![Gitter](https://img.shields.io/gitter/room/gitterHQ/gitter.svg?style=flat-square)](https://gitter.im/opprTeam)
@@ -14,128 +12,145 @@
 
 The presented repository has the source code for the "[Medical Imaging Downloader for CornerstoneJS and Orthanc](https://medium.com/oppr/medical-imaging-downloader-for-cornerstonejs-and-orthanc-d08c3a508d9b)" medium story. It represents the set of scripts to download medical images from a [WADO](https://www.medicalconnections.co.uk/tags/WADO) server and [PACS](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1718393/). For the purpose, we are using lightweight [JavaScript](https://www.javascript.com/) library for displaying medical images in a web browser, called [CornerstoneJS](https://cornerstonejs.org/). To store and retrieve the medical images, we are using the [Orthanc](https://www.orthanc-server.com/) server as a standalone [DICOM](https://www.dicomlibrary.com/) server. The scripts are reading from the [WADO](https://www.medicalconnections.co.uk/tags/WADO) server, linking the image paths to the [PACS](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1718393/) to retrieve the images from here and download it to a local folder. In other words, the code will know where are the images from the [`prototype-cornerstone`](https://github.com/MIMBCD-UI/prototype-cornerstone/) sample, retrieving the images stored at a [Orthanc](https://www.orthanc-server.com/) server.
 
-<a href="https://www.patreon.com/oppr" target="_blank">
-<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
-</a>
+## Table of contents
 
-## Pre-Requisites
+* [Prerequisites](#Prerequisites)
+* [Usage](#Usage)
+* [Roadmap](#Roadmap)
+* [Contribution](#Contribution)
+* [Acknowledgements](#Acknowledgements)
+* [License](#License)
 
-The following list is showing the set of dependencies for this project. Please, install and build in your machine the recommended versions.
+## Prerequisites
 
-List of dependencies for this project:
+The following list is showing the required dependencies for this project to run locally:
 
-- [Git](https://git-scm.com/) (>= [2.20](https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.20.1.txt))
+* [Git](https://git-scm.com/) or any other Git or GitHub version control tool
+* [Python](https://www.python.org/) (3.5 or newer)
 
-- [Python](https://www.python.org/) (>= [3.5](https://docs.python.org/3/))
+Here are some tutorials and documentation, if needed, to feel more comfortable about using and playing around with this software:
 
-## Instructions
+* Python: [Tutorial](https://docs.python.org/3/tutorial/index.html)
+* Git: [Tutorial](https://git-scm.com/docs/gittutorial)
+* GitHub: [Quick Tutorial](https://guides.github.com/activities/hello-world/)
 
-The instructions are as follows. We assume that you already have knowledge over [Git](https://git-scm.com/) and [GitHub](https://github.com/). If not, please follow this [support](https://guides.github.com/activities/hello-world/) information. Any need for support, just open a [New issue](https://github.com/opprDev/medical-image-downloader/issues/new).
+## Usage
 
-### Clone
+### Installation
 
-To clone the hereby repository follow the guidelines. It is easy as that.
+At this point, the only way to install this software is manual. Eventually, this will be accessible through [pip](https://pypi.org/project/pip/) or any other package manager, as mentioned on the [roadmap](#Roadmap).
 
-1.1. Please clone the repository by typing the command:
+Nonetheless, this kind of installation is as simple as cloning this repository. Virtually all Git and GitHub version control tools are capable of doing that. Through the console, we can use the command below, but other ways are also fine.
 
-```
+```bash
 git clone https://github.com/opprDev/medical-image-downloader.git
 ```
 
-1.2. Get inside of the repository directory:
+Optionally, the mimbcd_ui module/directory can be installed into the designated Python interpreter by moving it into the site-packages directory at the respective Python directory.
 
-```
-cd medical-image-downloader/
-```
+### Demonstration
 
-1.3. For the installation and running of the source code, follow the next steps;
+Please, feel free to try out our demo. It is a script called download_medical_images.py at the src/demo directory. It can be used as follows:
 
-### Install
-
-The installation guidelines are as follows. Please, be sure that you follow it correctly.
-
-2.1. Run the following command to install the [library](https://pip.pypa.io/en/stable/user_guide/) set using [pip](https://pypi.org/project/pip/):
-
-```
-pip3 install -r requirements.txt
+```bash
+python download_medical_images.py ./medical_images
 ```
 
-2.2. Follow the next step;
+Just keep in mind this is just a demo, so it does nothing more than downloading medical images to an arbitrary destination directory if the directory does not exist or does not have any content. Also, we did our best to make the demo as user-friendly as possible, so, above everything else, have fun! 😁
 
-### Run
-
-The running guidelines are as follows. Please, be sure that you follow it correctly.
-
-3.1. Run the sample using the following command:
-
-```
-python3 src/core/main.py
-```
-
-3.2. Enjoy our source code!
-
-### Notebooks
-
-You can also run a Notebook to watch some of our `models` chart plots. For this goal we are using the well known [Jupyter Notebook](http://jupyter.org/) web application. To run the [Jupyter Notebook](http://jupyter.org/) just follow the steps.
-
-4.1. Get inside our project directory:
-
-```
-cd src/notebooks/
-```
-
-4.2. Run [Jupyter Notebook](http://jupyter.org/) application by typing:
-
-```
-jupyter notebook
-```
-
-> If you have any question regarding the [Jupyter Notebook](http://jupyter.org/) just follow their [Documentation](http://jupyter.org/documentation). You can also ask for help close to the [Community](http://jupyter.org/community).
-
-## Information
+## Roadmap
 
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/3172/badge)](https://bestpractices.coreinfrastructure.org/projects/3172)
 
-We need to follow the repository goal, by addressing the thereby information. Therefore, it is of chief importance to scale this solution supported by the repository. The repository solution follow the best practices, achieving the [Core Infrastructure Initiative (CII)](https://bestpractices.coreinfrastructure.org/en/projects/3172) specifications.
+We need to follow the repository goal, by addressing the thereby information. Therefore, it is of chief importance to scale this solution supported by the repository. The repository solution follows the best practices, achieving the [Core Infrastructure Initiative (CII)](https://bestpractices.coreinfrastructure.org/en/projects/3172) specifications.
 
-### License
+Besides that, one of our goals involves creating a configuration file to automatically test and publish our code to pip or any other package manager. It will be most likely prepared for the [GitHub Actions](https://github.com/features/actions).
 
-Copyright © 2019 [oppr](https://oppr.io)
+Other goals may be written here in the future.
 
-The [`medical-image-downloader`](https://github.com/opprDev/medical-image-downloader) repository is distributed under the terms of [MIT](LICENSE) license and the present information is covered by this. You are free to make changes and use this in either personal or commercial projects. Attribution is not required, but it is welcomed. A little "Thanks!" (or something to that affect) would be much appreciated.
+## Contribution
 
-### Acknowledgements
+This project exists thanks to all the people who [contribute](CONTRIBUTING.md). We welcome everyone who wants to help us improve this downloader. Here are some suggestions:
+
+### As an issuer
+
+Either as something that seems missing or any need for support, just open a [new issue](https://github.com/opprDev/medical-image-downloader/issues/new). Regardless of being a simple request or a fully-structured feature, we will do our best to understand them and, eventually, solve them.
+
+### As a developer
+
+We like to develop, but we also like collaboration. You could ask us to add some feature... or you could want to do it yourself and fork this repository. Maybe even do some side-project of your own. If the latter ones, please let us share some insights about what we currently have.
+
+We do [TDD](https://en.wikipedia.org/wiki/Test-driven_development). In short, we first identify which are the behaviors this downloader should have and encode it using [unittest](https://docs.python.org/3/library/unittest.html) and [unittest.mock](https://docs.python.org/3/library/unittest.mock.html), and then implement our code in the most recent stable version of Python and, possibly, refactor it. This is more than optional, of course, but you would have at your disposal our test suite to make you more comfortable about changing our code. You could even add more unit tests.
+
+The textual illustration below shows the folder and file structure of our source code, along with their respective description.
+
+```
+medical-image-downloader/
+  mimbcd_ui/
+    download_all.py: File with the main method to download all DICOM files from MIMBCD-UI servers
+    constant.py: File with constants related to MIMBCD-UI
+    util/
+      api.py: File with API-related utility methods
+      format.py: File with formatting utility methods
+      url.py: File with URL-related utility methods
+  test/mimbcd_ui/
+    DownloadAllTestCase.py: A test case of download_all.py
+    mock/: Folder with mocks and their respective parameters, grouped by the module they are mocking
+    sample/: Folder with all samples, in python, as an output of mocks
+  demo/
+    download_medical_images.py: Command/Script to execute download_all.py
+```
+
+## Acknowledgements
+
+### Author
+
+* Francisco Maria Calisto [ [Website](http://www.franciscocalisto.me/) | [ResearchGate](https://www.researchgate.net/profile/Francisco_Maria_Calisto) | [GitHub](https://github.com/FMCalisto) | [Twitter](https://twitter.com/FMCalisto) | [LinkedIn](https://www.linkedin.com/in/fmcalisto/) ]
+
+### Contributors
+
+* Bruno Oliveira
+* Carlos Santiago
+* Duarte Figueirôa
+* Jacinto C. Nascimento
+* Luís Ribeiro Gomes
+* Pedro Miraldo
+* Nuno Nunes
+
+### Special Thanks
 
 A special thanks to [Chris Hafey](https://www.linkedin.com/in/chafey/), the propelling person of [CornerstoneJS](https://cornerstonejs.org/), who also developed the [cornerstoneDemo](https://github.com/chafey/cornerstoneDemo). Not forgetting the three supporters of the [CornerstoneJS](https://cornerstonejs.org/) library, [Aloïs Dreyfus](https://www.linkedin.com/in/alois-dreyfus), [Danny Brown](http://dannyrb.com/) and [Erik Ziegler](https://www.npmjs.com/~swederik). We also would like to give a special thanks to [Erik Ziegler](https://www.npmjs.com/~swederik) who support several [issues](https://groups.google.com/forum/#!forum/cornerstone-platform) during this path.
 
-### Authors
+### Supporters
 
-- [Francisco Maria Calisto](http://www.franciscocalisto.me/) [[ResearchGate](https://www.researchgate.net/profile/Francisco_Maria_Calisto) | [GitHub](https://github.com/FMCalisto) | [Twitter](https://twitter.com/FMCalisto) | [LinkedIn](https://www.linkedin.com/in/fmcalisto/)]
+Thank you to all our backers and sponsors! 🙏
 
-## Supporters
+#### Backers
+
+<a href="https://opencollective.com/oppr/contribute/backer-11217/checkout" target="_blank">
+<img src="https://opencollective.com/oppr/backers.svg">
+</a>
+
+#### Sponsors
+
+<a href="https://opencollective.com/oppr/contribute/sponsor-11218/checkout" target="_blank">
+<img src="https://opencollective.com/oppr/sponsors.svg">
+</a>
 
 Our organization is a non-profit organization. However, we have many expenses across our activity. From infrastructure to service expenses, we need some money, as well as help, to support our team and projects.
 
 <a href="https://opencollective.com/oppr" target="_blank">
-<img src="https://opencollective.com/oppr/tiers/backer.svg" width="220">
+<img src="https://opencollective.com/oppr/tiers/donate.svg" width="160">
 </a>
 
-### Contributors
+<br/>
 
-This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
-
-### Backers
-
-Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/oppr#backer)]
-
-<a href="https://opencollective.com/oppr#backers" target="_blank">
-<img src="https://opencollective.com/oppr/backers.svg?width=890">
+<a href="https://www.patreon.com/oppr" target="_blank">
+<img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" width="160">
 </a>
 
-### Sponsors
+## License
 
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/oppr#sponsor)]
+Copyright &copy; 2019 [oppr](https://oppr.io)
 
-<a href="https://opencollective.com/oppr/sponsor/0/website" target="_blank">
-<img src="https://opencollective.com/oppr/sponsor/0/avatar.svg">
-</a>
+The [`medical-image-downloader`](https://github.com/opprDev/medical-image-downloader) repository is distributed under the terms of [MIT](LICENSE) license and the present information is covered by this. You are free to make changes and use this in either personal or commercial projects. Attribution is not required, but it is welcomed. A little "Thanks!" (or something to that effect) would be much appreciated.
