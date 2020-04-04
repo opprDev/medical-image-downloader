@@ -1,0 +1,33 @@
+name: Create pull request - Verify Python package on TestPyPI
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install setuptools wheel twine
+    - name: Build
+      run: |
+        git config --local user.email "you@example.com"
+        git config --global user.name "Your Name"
+        git tag -a "0.0.$(date +%s)" -m ""
+        python setup.py sdist bdist_wheel
+    - name: Publish package to TestPyPI
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        user: __token__
+        password: ${{ secrets.test_pypi_password }}
+        repository_url: https://test.pypi.org/legacy/
