@@ -64,10 +64,6 @@ Just keep in mind this is just a demo, so it does nothing more than downloading 
 
 We need to follow the repository goal, by addressing the thereby information. Therefore, it is of chief importance to scale this solution supported by the repository. The repository solution follows the best practices, achieving the [Core Infrastructure Initiative (CII)](https://bestpractices.coreinfrastructure.org/en/projects/3172) specifications.
 
-Besides that, one of our goals involves creating a configuration file to automatically test and publish our code to pip or any other package manager. It will be most likely prepared for the [GitHub Actions](https://github.com/features/actions).
-
-Other goals may be written here in the future.
-
 ## Contribution
 
 This project exists thanks to all the people who [contribute](CONTRIBUTING.md). We welcome everyone who wants to help us improve this downloader. Here are some suggestions:
@@ -94,12 +90,20 @@ medical-image-downloader/
       format.py: File with formatting utility methods
       url.py: File with URL-related utility methods
   test/mimbcd_ui/
-    DownloadAllTestCase.py: A test case of download_all.py
+    download_all_test.py: A test case of download_all.py
     mock/: Folder with mocks and their respective parameters, grouped by the module they are mocking
     sample/: Folder with all samples, in python, as an output of mocks
   demo/
     download_medical_images.py: Command/Script to execute download_all.py
 ```
+
+We also follow CI/CD practices through [GitHub Actions](https://github.com/features/actions). Here are our workflows:
+
+* push_commit.yml - When pushing a commit to GitHub, test the downloader and evaluate code quality;
+* create_pull_request.yml - When creating a pull request, publish a package of the downloader into the testing environment of PyPI, to evaluate how the package will eventually be presented on the real PyPI;
+* publish_release.yml - When publishing a release, publish a package of the downloader into PyPI.
+
+Use them as you see fit. Just don't forget to credit us if you publish a fork of this downloader. :grin:
 
 ## Acknowledgements
 
