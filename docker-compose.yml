@@ -1,0 +1,7 @@
+version: "3.8"
+
+services:
+  mi:
+    build: .
+    volumes:
+      - ./out:/out
