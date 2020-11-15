@@ -4,7 +4,7 @@ with open('README.md', 'r', encoding='utf8') as f:
    long_description = f.read()
 
 setup(
-   name='MIMBCD-UI',
+   name='mi-downloader',
    use_scm_version={
       'local_scheme': 'no-local-version',
       'version_scheme': lambda version: version.format_with('{tag}')
@@ -45,6 +45,6 @@ setup(
       'Natural Language :: English'
    ],
    package_dir={'': 'src'},
-   packages=find_packages(where='src', include=['mimbcd_ui', 'mimbcd_ui.*']),
+   packages=find_packages(where='src', include=['mi', 'mi.*']),
    python_requires='~=3.5'
 )

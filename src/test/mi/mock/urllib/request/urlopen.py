@@ -1,6 +1,6 @@
 from unittest.mock import Mock
 from itertools import chain, repeat
-from test.mimbcd_ui.sample import studiesIndex_whenDownloaded, studiesIndex_whenDownloaded_withEmptyStudyList, \
+from test.mi.sample import studiesIndex_whenDownloaded, studiesIndex_whenDownloaded_withEmptyStudyList, \
     study_whenDownloaded, study_whenDownloaded_withEmptySeriesList
 
 returnValue_whenDownloadStudiesIndex = Mock()

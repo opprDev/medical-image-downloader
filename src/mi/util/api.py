@@ -1,10 +1,10 @@
-from mimbcd_ui.constant import MIMBCD_UI_STUDY_LIST_URL
-from mimbcd_ui.util.format import format_study_url, format_dicom_file_url, format_destination_path
-from mimbcd_ui.util.url import download_json, download_file
+from mi.constant import MI_STUDY_LIST_URL
+from mi.util.format import format_study_url, format_dicom_file_url, format_destination_path
+from mi.util.url import download_json, download_file
 
 
 def download_study_list():
-  study_list = download_json(MIMBCD_UI_STUDY_LIST_URL)
+  study_list = download_json(MI_STUDY_LIST_URL)
   return study_list.studyList
 
 

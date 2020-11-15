@@ -1,21 +1,21 @@
 from unittest import TestCase
-from mimbcd_ui import download_all
+from mi import download_all
 from unittest.mock import call, patch
-from mimbcd_ui.constant import MIMBCD_UI_ORTHANC_URL, MIMBCD_UI_STUDY_LIST_URL
+from mi.constant import MI_ORTHANC_URL, MI_STUDY_LIST_URL
 
-import test.mimbcd_ui.mock.urllib.request.urlopen
+import test.mi.mock.urllib.request.urlopen
 
 
 @patch('urllib.request.urlretrieve')
 class DownloadAllTestCase(TestCase):
-  @patch('urllib.request.urlopen', side_effect=test.mimbcd_ui.mock.urllib.request.urlopen.sideEffect())
+  @patch('urllib.request.urlopen', side_effect=test.mi.mock.urllib.request.urlopen.sideEffect())
   def test_whenDownloadMedicalImages_thenInvokeUrlopenFourTimes(self, mock_urlopen, mock_urlretrieve):
     self.urlopen_called_four_times(mock_urlopen)
 
-  @patch('urllib.request.urlopen', side_effect=test.mimbcd_ui.mock.urllib.request.urlopen.sideEffect())
+  @patch('urllib.request.urlopen', side_effect=test.mi.mock.urllib.request.urlopen.sideEffect())
   def test_whenDownloadMedicalImages_thenInvokeUrlretrieveSeveralTimes(self, mock_urlopen, mock_urlretrieve):
     download_all(
-      source_dicom_server_url=MIMBCD_UI_ORTHANC_URL,
+      source_dicom_server_url=MI_ORTHANC_URL,
       destination_directory='medical_images'
     )
     mock_urlretrieve.assert_has_calls([
@@ -39,33 +39,33 @@ class DownloadAllTestCase(TestCase):
       call('http://breastscreening.isr.tecnico.ulisboa.pt:8450/instances/88653231-d6fba822-1af594af-e6f5b30d-dd1ab7f2/file', 'medical_images/10000018.dcm'),
     ])
 
-  @patch('urllib.request.urlopen', side_effect=test.mimbcd_ui.mock.urllib.request.urlopen.sideEffect_withEmptyStudyList())
+  @patch('urllib.request.urlopen', side_effect=test.mi.mock.urllib.request.urlopen.sideEffect_withEmptyStudyList())
   def test_whenDownloadMedicalImages_withEmptyStudyList_thenInvokeUrlopenOnce(self, mock_urlopen, mock_urlretrieve):
     download_all(
-      source_dicom_server_url=MIMBCD_UI_ORTHANC_URL,
+      source_dicom_server_url=MI_ORTHANC_URL,
       destination_directory='medical_images'
     )
-    mock_urlopen.assert_called_once_with(MIMBCD_UI_STUDY_LIST_URL)
+    mock_urlopen.assert_called_once_with(MI_STUDY_LIST_URL)
 
-  @patch('urllib.request.urlopen', side_effect=test.mimbcd_ui.mock.urllib.request.urlopen.sideEffect_withEmptyStudyList())
+  @patch('urllib.request.urlopen', side_effect=test.mi.mock.urllib.request.urlopen.sideEffect_withEmptyStudyList())
   def test_whenDownloadMedicalImages_withEmptyStudyList_thenDoNotInvokeUrlretrieve(self, mock_urlopen, mock_urlretrieve):
     self.urlretrieve_not_called(mock_urlretrieve)
 
-  @patch('urllib.request.urlopen', side_effect=test.mimbcd_ui.mock.urllib.request.urlopen.sideEffect_withEmptySeriesList())
+  @patch('urllib.request.urlopen', side_effect=test.mi.mock.urllib.request.urlopen.sideEffect_withEmptySeriesList())
   def test_whenDownloadMedicalImages_withEmptySeriesList_thenInvokeUrlopenOnce(self, mock_urlopen, mock_urlretrieve):
     self.urlopen_called_four_times(mock_urlopen)
 
-  @patch('urllib.request.urlopen', side_effect=test.mimbcd_ui.mock.urllib.request.urlopen.sideEffect_withEmptySeriesList())
+  @patch('urllib.request.urlopen', side_effect=test.mi.mock.urllib.request.urlopen.sideEffect_withEmptySeriesList())
   def test_whenDownloadMedicalImages_withEmptySeriesList_thenDoNotInvokeUrlretrieve(self, mock_urlopen, mock_urlretrieve):
     self.urlretrieve_not_called(mock_urlretrieve)
 
   def urlopen_called_four_times(self, mock_urlopen):
     download_all(
-      source_dicom_server_url=MIMBCD_UI_ORTHANC_URL,
+      source_dicom_server_url=MI_ORTHANC_URL,
       destination_directory='medical_images'
     )
     mock_urlopen.assert_has_calls([
-      call(MIMBCD_UI_STUDY_LIST_URL),
+      call(MI_STUDY_LIST_URL),
       call('http://breastscreening.isr.tecnico.ulisboa.pt:8982/src/studies/7.json'),
       call('http://breastscreening.isr.tecnico.ulisboa.pt:8982/src/studies/0.json'),
       call('http://breastscreening.isr.tecnico.ulisboa.pt:8982/src/studies/Case1.json')
@@ -73,7 +73,7 @@ class DownloadAllTestCase(TestCase):
 
   def urlretrieve_not_called(self, mock_urlretrieve):
     download_all(
-      source_dicom_server_url=MIMBCD_UI_ORTHANC_URL,
+      source_dicom_server_url=MI_ORTHANC_URL,
       destination_directory='medical_images'
     )
     mock_urlretrieve.assert_not_called()
