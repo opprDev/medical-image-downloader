@@ -1,4 +1,4 @@
-from mimbcd_ui.util.api import download_dicom_file, download_study_list, download_series_list
+from mi.util.api import download_dicom_file, download_study_list, download_series_list
 
 
 def download_all(source_dicom_server_url, destination_directory):

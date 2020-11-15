@@ -1,7 +1,7 @@
 import os
 import sys
-from mimbcd_ui import download_all
-from mimbcd_ui.constant import MIMBCD_UI_ORTHANC_URL
+from mi import download_all
+from mi.constant import MI_ORTHANC_URL
 
 assert len(sys.argv) == 2, """Invalid command usage.
 Correct usage: download_medical_images <destination-directory>
@@ -21,6 +21,6 @@ Please, keep in mind this is just a demo. Have fun! :)
 os.makedirs(destination_directory, exist_ok=True)
 
 download_all(
-  source_dicom_server_url=MIMBCD_UI_ORTHANC_URL,
+  source_dicom_server_url=MI_ORTHANC_URL,
   destination_directory=destination_directory
 )

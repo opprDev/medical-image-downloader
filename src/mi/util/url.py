@@ -1,5 +1,5 @@
 import urllib.request
-from mimbcd_ui.util.format import format_json
+from mi.util.format import format_json
 
 
 def download_json(source_url):

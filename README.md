@@ -46,7 +46,7 @@ Nonetheless, this kind of installation is as simple as cloning this repository. 
 git clone https://github.com/opprDev/medical-image-downloader.git
 ```
 
-Optionally, the mimbcd_ui module/directory can be installed into the designated Python interpreter by moving it into the site-packages directory at the respective Python directory.
+Optionally, the mi module/directory can be installed into the designated Python interpreter by moving it into the site-packages directory at the respective Python directory.
 
 ### Demonstration
 
@@ -82,14 +82,14 @@ The textual illustration below shows the folder and file structure of our source
 
 ```
 medical-image-downloader/
-  mimbcd_ui/
-    download_all.py: File with the main method to download all DICOM files from MIMBCD-UI servers
-    constant.py: File with constants related to MIMBCD-UI
+  mi/
+    download_all.py: File with the main method to download all DICOM files from the Orthanc server
+    constant.py: File with constants
     util/
       api.py: File with API-related utility methods
       format.py: File with formatting utility methods
       url.py: File with URL-related utility methods
-  test/mimbcd_ui/
+  test/mi/
     download_all_test.py: A test case of download_all.py
     mock/: Folder with mocks and their respective parameters, grouped by the module they are mocking
     sample/: Folder with all samples, in python, as an output of mocks
