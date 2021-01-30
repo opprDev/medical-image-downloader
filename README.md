@@ -111,13 +111,14 @@ Use them as you see fit. Just don't forget to credit us if you publish a fork of
 
 * Francisco Maria Calisto [ [Website](http://www.franciscocalisto.me/) | [ResearchGate](https://www.researchgate.net/profile/Francisco_Maria_Calisto) | [GitHub](https://github.com/FMCalisto) | [Twitter](https://twitter.com/FMCalisto) | [LinkedIn](https://www.linkedin.com/in/fmcalisto/) ]
 
+* Luís Ribeiro Gomes
+
 ### Contributors
 
 * Bruno Oliveira
 * Carlos Santiago
 * Duarte Figueirôa
 * Jacinto C. Nascimento
-* Luís Ribeiro Gomes
 * Pedro Miraldo
 * Nuno Nunes
 
