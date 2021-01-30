@@ -29,5 +29,5 @@ jobs:
       uses: pypa/gh-action-pypi-publish@master
       with:
         user: __token__
-        password: ${{ secrets.test_pypi_password }}
+        password: pypi-AgENdGVzdC5weXBpLm9yZwIkNTYxYTkxNzItNDA1Yy00OWYwLTliNGQtYTMxMWFmZTc4MTBlAAIleyJwZXJtaXNzaW9ucyI6ICJ1c2VyIiwgInZlcnNpb24iOiAxfQAABiCx6v1wctfgXPEWPynAaYlZ53NeeKFBjk3yzAvVsjEiBQ
         repository_url: https://test.pypi.org/legacy/
