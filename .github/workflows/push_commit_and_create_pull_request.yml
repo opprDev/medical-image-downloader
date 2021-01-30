@@ -1,7 +1,9 @@
-name: Push commit - Install Python dependencies, run tests and lint with a variety of Python versions
+name: Push commit & create pull request - Install Python dependencies, run tests and lint with a variety of Python versions
 
 on:
-  push
+  push:
+  pull_request:
+    types: [opened]
 
 jobs:
   build:
