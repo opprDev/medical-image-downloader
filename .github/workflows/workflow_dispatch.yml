@@ -1,8 +1,7 @@
-name: Create pull request - Verify Python package on TestPyPI
+name: Workflow dispatch - Verify Python package on TestPyPI
 
 on:
-  pull_request:
-    types: [opened]
+  workflow_dispatch
 
 jobs:
   deploy:
